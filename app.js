@@ -5,14 +5,15 @@ const userRoute= require("./Routes/UserRoutes")
 const orderRoutes =require('./Routes/OrderRoutes')
 const foodRoute =require('./Routes/FoodRoutes')
 const dotenv = require('dotenv')
-require('./prod')(app)
+dotenv.config()
 const cors =require('cors')
 app.use(cors({
      origin: '*',
      credentials:true,            //access-control-allow-credentials:true
      optionSuccessStatus:200
 }))
-dotenv.config()
+require('./prod')(app)
+
 app.use(express.json())
 app.use(express.urlencoded())
 app.use(cors({
