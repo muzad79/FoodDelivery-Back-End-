@@ -2,10 +2,11 @@
   "name": "kashmirfoodhub(back-end)",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +20,9 @@
     "express-validator": "^7.0.1",
     "helmet": "^7.0.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^7.6.1",
+    "mongoose": "^7.6.1"
+  },
+  "devDependencies": {
     "nodemon": "^3.0.1"
   }
 }
