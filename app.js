@@ -8,7 +8,9 @@ const dotenv = require('dotenv')
 require('./prod')(app)
 const cors =require('cors')
 app.use(cors({
-     origin: '*'
+     origin: '*',
+     credentials:true,            //access-control-allow-credentials:true
+     optionSuccessStatus:200
 }))
 dotenv.config()
 app.use(express.json())
