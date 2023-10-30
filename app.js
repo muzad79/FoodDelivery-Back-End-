@@ -22,6 +22,9 @@ app.use(cors())
 app.use('/user',userRoute)
 app.use('/',foodRoute)
 app.use('/orders',orderRoutes)
+app.get('/hi',(req,res)=>{
+ res.send("hi")
+})
 
 
 app.listen(process.env.PORT,()=>{
