@@ -11,20 +11,15 @@ dotenv.config()
 app.use(express.json())
 app.use(express.urlencoded())
 app.use(cors())
- mongoose.connect(process.env.MONGO_URL,{
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
+ mongoose.connect(process.env.MONGO_URL || "")
 
    
     
 
 app.use('/user',userRoute)
-//app.use('/',foodRoute)
+app.use('/',foodRoute)
 app.use('/orders',orderRoutes)
-app.get('/',(req,res)=>{
- res.send("hi")
-})
+
 
 
 app.listen(process.env.PORT,()=>{
