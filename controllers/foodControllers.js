@@ -1,11 +1,11 @@
 const mongoose=require('mongoose')
-const FoodModel = require('../models/FoodItems')
+const FoodItems = require('../models/FoodItems')
 const FoodCategoryModel = require('../models/FoodCategory')
 
 async function getFoodItems(req,res){ 
     try{ 
     
-    let foodData = await FoodModel.find()
+    let foodData = await FoodItems.find()
     let foodCategory = await FoodCategoryModel.find()
     
         res.status(200).json({foodData:foodData,

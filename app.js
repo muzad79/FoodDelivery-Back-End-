@@ -7,10 +7,15 @@ const foodRoute =require('./Routes/FoodRoutes')
 const dotenv = require('dotenv')
 require('./prod')(app)
 const cors =require('cors')
+app.use(cors({
+     origin: '*'
+}))
 dotenv.config()
 app.use(express.json())
 app.use(express.urlencoded())
-app.use(cors())
+app.use(cors({
+     origin: '*'
+}))
  mongoose.connect(process.env.MONGO_URL || "")
 
    

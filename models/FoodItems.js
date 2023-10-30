@@ -10,6 +10,6 @@ const SchemaTemplate ={
 
 }
 const FoodSchema =new mongoose.Schema(SchemaTemplate)
-const FoodModel =mongoose.model("FoodItems",FoodSchema)
+const FoodItems =mongoose.model("FoodItems",FoodSchema)
 
-module.exports=FoodModel
+module.exports=FoodItems
