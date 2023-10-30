@@ -20,9 +20,9 @@ app.use(cors())
     
 
 app.use('/user',userRoute)
-app.use('/',foodRoute)
+//app.use('/',foodRoute)
 app.use('/orders',orderRoutes)
-app.get('/hi',(req,res)=>{
+app.get('/',(req,res)=>{
  res.send("hi")
 })
 
